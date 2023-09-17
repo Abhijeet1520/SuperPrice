@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from 'react-router-dom';
+import Homepage from './pages/homepage';
+import OfferList from './components/offerList/offerList';
 // import SearchResults from './pages/searchResults/searchResults';
 
 
@@ -33,7 +35,15 @@ const router = createBrowserRouter([
       },
       {
         path: '',
-      }
+        element: <Homepage/>,
+        children: [
+          {
+            path: ":discount",
+            element: <OfferList key={":discount"}/>
+          }
+        ]
+      },
+      
     ]
     
   }

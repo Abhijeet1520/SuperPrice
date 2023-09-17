@@ -1,5 +1,3 @@
-// import React from 'react';
-// import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
 import { Route, Routes } from 'react-router';
@@ -22,8 +20,6 @@ function App() {
         <div className='pg-content'>
       <Navbar/>
       {/* <div className='space'></div> */}
-      
-      {/**IDK how to do next.js routing so i did this for the time being */}
 
       {/**IMPORTANT: Also need to add path to index.tsx */}
       {/**See index.tsx for mor info */}
@@ -32,7 +28,7 @@ function App() {
           <Route path='/ProductDetail/:id' element={<ProductDetail/>}/>
           <Route path='/search' element={<SearchResults searchItem=''/>} />
           <Route path='/' element={<Homepage/>}>
-            <Route path=":discount" element={<OfferList/>}/>
+            <Route path=":discount" element={<OfferList />}/>
           </Route>
         </Routes>
       </div>
